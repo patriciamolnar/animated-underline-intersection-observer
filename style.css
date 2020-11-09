@@ -1,0 +1,147 @@
+:root {
+    --dark: #1a1a1a; 
+    --light: #b0a6ae; 
+    --color:#ffa200; 
+    --color2: #ffb433; 
+
+    --font: 'Baloo Tammudu 2', cursive;
+}
+* {
+    margin: 0; 
+    padding: 0; 
+}
+
+body {
+    background-color: var(--dark); 
+    font-family: var(--font); 
+    color: white; 
+}
+
+header {
+    width: 100%; 
+    height: 100vh; 
+
+    background-color: var(--dark); 
+    background-image: url('https://images.pexels.com/photos/1567069/pexels-photo-1567069.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: luminosity;
+    font-size: 2rem; 
+    line-height: 2rem; 
+}
+
+header div {
+    position: relative; 
+    width: 80%; 
+    text-align: center; 
+    top: 30%; 
+    left: 50%; 
+    transform: translateX(-50%);
+}
+
+#site-title {
+    font-size: 5rem; 
+    margin-bottom: 2.5rem;
+    position: relative;
+    display: inline-block;  
+}
+
+#site-title::after {
+    content:''; 
+    position: absolute; 
+    left: 0; 
+    width: 100%;  
+    bottom: -10px; 
+    height: 3px; 
+    background-color: var(--color); 
+
+    transform: scaleX(0); 
+    transition: transform 1s ease-in; 
+}
+
+#site-title.underline::after {
+    transform: scaleX(1);
+}
+
+
+main {
+    width: 80%; 
+    margin: auto;
+    font-size: 1.1em;
+}
+
+section {
+    margin: 1.5rem auto 2.5rem; 
+}
+
+h2 {
+    margin-bottom: 0.5rem;
+    position: relative; 
+    display: inline-block;
+}
+
+h2::after {
+    content:''; 
+    position: absolute; 
+    left: 0; 
+    width: 100px;  
+    bottom: 15px; 
+    height: 3px; 
+    background-color: var(--color); 
+
+    transform: scaleX(0); 
+    transform-origin: right;
+    transition: transform 1s ease-in; 
+}
+
+h2.underline::after {
+    transform: scale(1);
+    transform-origin: left;
+}
+
+label {
+    display: block; 
+}
+
+.contact {
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-image {
+    background-color: var(--dark);
+    background-image: url('https://c.pxhere.com/photos/0e/c7/wall_e_robot_toy_cute_wallpaper_romantic_android-1209019.jpg!d'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.contact-form {
+    padding-left: 1rem; 
+}
+
+.contact-form input {
+    height: 30px;
+    width: 100%; 
+    padding-left: 5px;
+}
+
+.contact-form textarea {
+    width: 100%;
+}
+
+.contact-form button {
+    background-color: var(--color); 
+    border: none; 
+    padding: 0.5rem 2rem 0rem; 
+    border-radius: 2rem;
+    font-family: var(--font);
+    font-weight: 700;
+    cursor: pointer; 
+}
+
+.contact-form button:hover { 
+    background-color: var(--color2); 
+}
